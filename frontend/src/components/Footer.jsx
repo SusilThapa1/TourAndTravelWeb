@@ -10,11 +10,11 @@ import {
 
 const Footer = () => {
   const quickLinks = [
-    "About Us",
-    "Our Tours",
-    "Destinations",
-    "Reviews",
-    "Contact Us",
+    { name: "About Us", href: "#about" },
+    { name: "Our Tours", href: "#tours" },
+    { name: "Services", href: "#services" },
+    { name: "Testimonials", href: "#testimonials" },
+    { name: "Contact Us", href: "#contact" },
   ];
 
   const destinations = [
@@ -27,14 +27,30 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: FaFacebookF, href: "https://www.facebook.com", label: "Facebook" },
-    { icon: FaTwitter, href: "https://www.twitter.com", label: "Twitter" },
     {
-      icon: FaInstagram,
+      icon: FaFacebookF,
+      href: "https://www.facebook.com",
+      label: "Facebook",
+      color: "bg-blue-500",
+    },
+    {
+      icon: FaTwitter,
+      href: "https://www.twitter.com",
+      label: "Twitter",
+      color: "bg-gray-500",
+    },
+    {
+      icon: <FaInstagram />,
       href: "https://www.instagram.com",
       label: "Instagram",
+      color: "bg-pink-500",
     },
-    { icon: FaYoutube, href: "https://www.youtube.com", label: "YouTube" },
+    {
+      icon: <FaYoutube />,
+      href: "https://www.youtube.com",
+      label: "YouTube",
+      color: "bg-red-500",
+    },
   ];
 
   return (
@@ -71,13 +87,13 @@ const Footer = () => {
             <div>
               <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
               <ul className="space-y-3 text-white/80 text-sm flex flex-col justify-center items-center">
-                {quickLinks.map((link) => (
-                  <li key={link}>
+                {quickLinks.map((link, i) => (
+                  <li key={i}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="hover:text-yellow-400 transition-colors"
                     >
-                      {link}
+                      {link.name}
                     </a>
                   </li>
                 ))}
@@ -126,11 +142,11 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="flex space-x-4 mt-6 w-full items-center justify-center gap-5">
-              {socialLinks.map(({ icon: Icon, href, label }) => (
+              {socialLinks.map(({ icon: Icon, href, label, color }) => (
                 <a
                   key={label}
                   href={href}
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-yellow-400 transition-colors"
+                  className={`w-10 h-10 bg-white/10 rounded-full flex items-center justify-center   transition-colors hover:${color}`}
                   aria-label={label}
                 >
                   <Icon className="text-white" />
