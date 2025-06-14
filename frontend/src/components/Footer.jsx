@@ -28,28 +28,28 @@ const Footer = () => {
 
   const socialLinks = [
     {
-      icon: FaFacebookF,
+      icon: <FaFacebookF />,
       href: "https://www.facebook.com",
       label: "Facebook",
-      color: "bg-blue-500",
+      color: "hover:bg-blue-500",
     },
     {
-      icon: FaTwitter,
+      icon: <FaTwitter />,
       href: "https://www.twitter.com",
       label: "Twitter",
-      color: "bg-gray-500",
+      color: "hover:bg-sky-500 ",
     },
     {
       icon: <FaInstagram />,
       href: "https://www.instagram.com",
       label: "Instagram",
-      color: "bg-pink-500",
+      color: "hover:bg-gradient-to-r from-yellow-400 to-pink-400",
     },
     {
       icon: <FaYoutube />,
       href: "https://www.youtube.com",
       label: "YouTube",
-      color: "bg-red-500",
+      color: "hover:bg-red-500",
     },
   ];
 
@@ -142,14 +142,14 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="flex space-x-4 mt-6 w-full items-center justify-center gap-5">
-              {socialLinks.map(({ icon: Icon, href, label, color }) => (
+              {socialLinks.map(({ icon, href, label, color }) => (
                 <a
                   key={label}
                   href={href}
-                  className={`w-10 h-10 bg-white/10 rounded-full flex items-center justify-center   transition-colors hover:${color}`}
+                  className={`w-10 h-10 bg-white/10 rounded-full flex items-center justify-center   transition-colors  ${color}`}
                   aria-label={label}
                 >
-                  <Icon className="text-white" />
+                  {icon}
                 </a>
               ))}
             </div>
@@ -158,7 +158,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-white/70">
-          <p>© 2024 TourWebsite. All rights reserved.</p>
+          <p>© {Date()} TourWebsite. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-yellow-400 transition-colors">
               Privacy Policy

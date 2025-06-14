@@ -99,6 +99,7 @@ const Header = () => {
               ))}
               <div className="flex flex-col space-y-2 pt-4">
                 <button className="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100 transition">
+                  <a href="/signin"></a>
                   Sign In
                 </button>
                 <button className="px-4 py-2 bg-gradient-to-r from-yellow-400 to-pink-400 text-white rounded hover:opacity-90 transition">
