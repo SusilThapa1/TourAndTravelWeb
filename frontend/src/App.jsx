@@ -1,11 +1,13 @@
+import { Route, Routes } from "react-router-dom";
 import About from "./components/About";
 import FeaturedTours from "./components/FeaturedTours";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
-import Testimonials from "./components/testimonials";
+import Testimonials from "./components/Testimonials";
 import "./index.css";
+import SignIn from "./components/SignIn";
 function App() {
   return (
     <>
@@ -16,8 +18,12 @@ function App() {
         <About />
         <Services />
         <Testimonials />
+
         <Footer />
       </div>
+      <Routes>
+        <Route path="/signin" element={<SignIn />} />
+      </Routes>
     </>
   );
 }

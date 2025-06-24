@@ -63,7 +63,7 @@ const Header = () => {
           {/* Desktop buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <button className="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100 transition">
-              Sign In
+              <a href="/signin">Sign In</a>
             </button>
             <button className="px-4 py-2 bg-gradient-to-r from-yellow-400 to-pink-500 text-white rounded hover:opacity-90 transition cursor-pointer">
               <a href="/">Book Now</a>

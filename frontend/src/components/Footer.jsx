@@ -146,7 +146,7 @@ const Footer = () => {
                 <a
                   key={label}
                   href={href}
-                  className={`w-10 h-10 bg-white/10 rounded-full flex items-center justify-center   transition-colors  ${color}`}
+                  className={`w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center  duration-500  transition-all  ${color}`}
                   aria-label={label}
                 >
                   {icon}

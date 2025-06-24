@@ -7,7 +7,7 @@ const Testimonials = () => {
       name: "Sarah Johnson",
       location: "New York, USA",
       avatar:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz7tkp7RwYEvJM0dJ7K91L5ZDQ6lXOJdXDbA&s",
+        "https://images.unsplash.com/photo-1747734786792-317d1d8e8690?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDk5fHRvd0paRnNrcEdnfHxlbnwwfHx8fHw%3D",
       rating: 5,
       text: "TourWebsite made our Swiss Alps adventure absolutely magical! The attention to detail and personalized service exceeded all our expectations. We'll definitely be booking our next trip with them.",
     },
@@ -50,7 +50,7 @@ const Testimonials = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((t, i) => (
             <div
-              key={t.id}
+              key={i}
               className="relative animate-scale-in bg-gray-50 rounded-lg shadow-md p-8 hover:shadow-xl hover:-translate-y-2 transition-transform duration-300"
             >
               <div className="absolute top-4 right-4 text-gray-200">

@@ -12,13 +12,8 @@ const Hero = () => {
       className="relative md:min-h-screen flex items-center justify-center scroll-mt-20 py-10"
     >
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/30 to-pink-500/30 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')]">
+        <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-pink-500/20 backdrop-blur-sm"></div>
       </div>
 
       {/* Content */}
